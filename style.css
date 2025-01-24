@@ -23,15 +23,6 @@ header {
   background-color: #00096b;
 }
 
-.nama {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: large;
-  justify-content: center;
-  align-items: center;
-}
-
 .nama img {
   width: 10%;
   aspect-ratio: 1/1;
