@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 10px;
+  background-color: #00096b;
+}
+
+.nama {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+}
+
+.nama .na2 {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  gap: 10px;
+}
+nav ul li {
+  list-style-type: none;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #00096b;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.6s ease;
+}
+
+nav ul li a:hover {
+  background-color: #000649;
+  font-weight: 700;
+}
+
+/* Latar belakang utama */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Untuk memastikan latar belakang tidak keluar */
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/img/my.jpg") no-repeat;
+  background-position: 10% 25%;
+  background-size: 150%;
+  filter: grayscale(100%);
+  z-index: 0; /* Pastikan elemen ini berada di belakang */
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.7); /* Transparansi hitam */
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  z-index: 1; /* Pastikan elemen ini berada di atas latar belakang */
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rp {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 200px; /* Ukuran lebar untuk crop */
+  height: 200px; /* Tinggi sama untuk rasio 1:1 */
+  overflow: hidden; /* Memastikan bagian luar gambar tidak terlihat */
+  border-radius: 50%; /* Opsional: Buat gambar bulat */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.short {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #00096b;
+  color: white;
+}
+
+.short h2,.short h3 {
+  font-weight: bold;
+}
+
+.short h2 {
+  font-size: xx-large;
+}
+
+.short h3 {
+  font-size: x-large;
+  font-style: italic;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.about h1 {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.about .containerAbout {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3em;
+}
+
+.about .containerAbout img {
+  box-shadow: none;
+  border-radius: 3em;
+}
+
+.about .containerAbout .list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.about .containerAbout .list h2 {
+  font-weight: bold;
+  font-size: 3.5em;
+  font-style: italic;
+  text-align: left;
+}
+
+.about .containerAbout .list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.about .containerAbout .list ul li {
+  list-style: none;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.portofolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #00096b;
+  color: white;
+  margin-top:1em; 
+}
+
+.portofolio h2 {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.portofolio .listCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center ;
+  width: 100%;
+}
+
+.portofolio .listCard .card {
+  width: 17em;
+  height: 30em;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  color: #00096b;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  padding: 3em;
+}
+
+.contact h2 {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.contact .listContact {
+  width: 100%;
+}
+
+.contact .listContact ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em;
+}
+
+.contact .listContact ul li {
+  list-style: none;
+}
+
+.contact .listContact ul li a img {
+  border-radius: 100%;
+  box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.5);
+  transition: ease .3s;
+}
+
+.contact .listContact ul li a img:hover {
+  box-shadow: 4px 4px 3px 2px rgba(0,0,0,0.3);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(12, 12, 12);
+  color: white
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  padding: 8em 0;
+  justify-content: space-around;
+}
+
+.footerContainer div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: fit-content;
+}
+
+.footerContainer div ul li {
+  list-style: none;
+  font-weight: 300;
+}
+
+.footerContainer div ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
