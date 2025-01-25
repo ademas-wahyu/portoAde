@@ -24,9 +24,10 @@ header {
 }
 
 .nama img {
-  width: 10%;
+  width: 70px;
   aspect-ratio: 1/1;
   border-radius: 100%;
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 1);
 }
 
 nav ul {
@@ -54,7 +55,6 @@ nav ul li a:hover {
   font-weight: 700;
 }
 
-/* Latar belakang utama */
 .home {
   position: relative;
   width: 100%;
@@ -62,7 +62,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Untuk memastikan latar belakang tidak keluar */
+  overflow: hidden;
 }
 
 .home::before {
@@ -76,7 +76,7 @@ nav ul li a:hover {
   background-position: 10% 25%;
   background-size: 150%;
   filter: grayscale(100%);
-  z-index: 0; /* Pastikan elemen ini berada di belakang */
+  z-index: 0;
 }
 
 .card {
@@ -84,16 +84,70 @@ nav ul li a:hover {
   width: 90%;
   max-width: 1200px;
   height: 80%;
-  background: rgba(0, 0, 0, 0.7); /* Transparansi hitam */
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
-  z-index: 1; /* Pastikan elemen ini berada di atas latar belakang */
+  z-index: 1;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   justify-content: space-between;
   align-items: center;
+}
+
+.lp {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: max-content;
+}
+
+.lp h1 {
+  font-family: "Monoton", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5em;
+}
+
+.lp h2 {
+  font-size: 3em;
+  font-style: italic;
+}
+
+.lp a {
+  appearance: button;
+  background-color: #00096b;
+  background-image: none;
+  border-radius: 4px;
+  box-shadow: #fff 0px 0px 0 0, #00096b 0px 0px 0 0px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: max-content;
+  text-decoration: none;
+  transition: ease 0.2s;
+}
+
+.lp a:focus,
+.lp a:hover {
+  box-shadow: #fff 4px 4px 0 0, #00096b 4px 4px 0 1px;
+  border-radius: 4px;
 }
 
 .rp {
@@ -105,10 +159,10 @@ nav ul li a:hover {
 
 .image-container {
   position: relative;
-  width: 200px; /* Ukuran lebar untuk crop */
-  height: 200px; /* Tinggi sama untuk rasio 1:1 */
-  overflow: hidden; /* Memastikan bagian luar gambar tidak terlihat */
-  border-radius: 50%; /* Opsional: Buat gambar bulat */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .image-container img {
@@ -131,7 +185,8 @@ nav ul li a:hover {
   color: white;
 }
 
-.short h2,.short h3 {
+.short h2,
+.short h3 {
   font-weight: bold;
 }
 
@@ -211,7 +266,7 @@ nav ul li a:hover {
   align-items: center;
   background-color: #00096b;
   color: white;
-  margin-top:1em; 
+  margin-top: 1em;
 }
 
 .portofolio h2 {
@@ -222,7 +277,7 @@ nav ul li a:hover {
 .portofolio .listCard {
   display: flex;
   justify-content: space-around;
-  align-items: center ;
+  align-items: center;
   width: 100%;
 }
 
@@ -270,12 +325,12 @@ nav ul li a:hover {
 
 .contact .listContact ul li a img {
   border-radius: 100%;
-  box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.5);
-  transition: ease .3s;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.5);
+  transition: ease 0.3s;
 }
 
 .contact .listContact ul li a img:hover {
-  box-shadow: 4px 4px 3px 2px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -285,7 +340,7 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: rgb(12, 12, 12);
-  color: white
+  color: white;
 }
 
 .footerContainer {
@@ -299,7 +354,17 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: fit-content;
+  width: 100%;
+  padding: 1em;
+}
+
+.footerContainer div:nth-child(2) {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.footerContainer div:nth-child(3) {
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .footerContainer div ul li {
@@ -311,6 +376,57 @@ footer {
   text-decoration: none;
   color: white;
   font-weight: 300;
+}
+
+.topBtn {
+  position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 100%;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0; /* Awalnya disembunyikan */
+      visibility: hidden;/* Tidak terlihat */
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      animation: bubble infinite 1.5s ease;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+
+  75% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.topBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.topBtn img {
+  width: 1.5em;
+  height: 1.5em;
+  filter: invert(100%);
 }
 
 @media (max-width: 1024px) {
@@ -331,10 +447,9 @@ footer {
   nav ul {
     flex-direction: column;
     width: 100%;
-    gap: 15px; 
+    gap: 15px;
     align-items: center;
   }
-
 
   .home {
     flex-direction: column;
@@ -349,6 +464,11 @@ footer {
     padding: 20px;
     text-align: center;
     gap: 20px;
+  }
+
+  .lp {
+    justify-content: center;
+    align-items: center;
   }
 
   .rp {
@@ -391,6 +511,10 @@ footer {
     font-size: 1.5em;
   }
 
+  .short h3 {
+    text-align: center;
+  }
+
   .portofolio {
     padding: 30px 20px;
     gap: 30px;
@@ -408,7 +532,6 @@ footer {
     width: 90%;
     padding: 20px;
     margin-bottom: 20px;
-
   }
 
   .contact {
@@ -433,7 +556,7 @@ footer {
 
   .footerContainer {
     gap: 20px;
-    padding: 20px; 
+    padding: 20px;
   }
 }
 
@@ -472,6 +595,18 @@ footer {
     padding: 15px;
     text-align: center;
     gap: 15px;
+  }
+
+  .lp h1 {
+    font-size: x-large;
+  }
+
+  .lp h2 {
+    font-size: large;
+  }
+
+  .lp a {
+    padding: 1em;
   }
 
   .rp {
@@ -556,7 +691,11 @@ footer {
     flex-direction: column;
     gap: 15px;
   }
-
+  .footerContainer div:nth-child(2),
+  .footerContainer div:nth-child(3) {
+    border-left: 0;
+    border-right: 0;
+  }
   .footerContainer div {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1em;
